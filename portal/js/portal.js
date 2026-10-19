@@ -101,6 +101,55 @@
         });
       });
     }
+
+    setupBooking(runtime);
+  }
+
+  function setupBooking(runtime) {
+    var app = document.getElementById('booking-app');
+    if (!app) return;
+    var apiBase = runtime.meritstoreApiBase || '';
+    var registerUrl = runtime.meritstoreRegisterUrl || '/subs/';
+    if (!apiBase) {
+      app.innerHTML = '<p class="notice">Subscriber registration and calendar booking are not connected yet.</p><a class="button secondary" href="' + registerUrl + '">Start subscriber registration</a>';
+      return;
+    }
+    var tenant = 'itm';
+    var from = new Date();
+    var to = new Date(Date.now() + 14 * 86400000);
+    var url = apiBase + '/v1/tenants/' + tenant + '/availability?from=' + encodeURIComponent(from.toISOString()) + '&to=' + encodeURIComponent(to.toISOString()) + '&duration=90';
+    fetch(url, { cache: 'no-store' }).then(function (response) {
+      if (!response.ok) throw new Error('availability unavailable');
+      return response.json();
+    }).then(function (payload) {
+      var slots = (payload.availability || []).filter(function (slot) { return slot.status === 'available'; });
+      if (!slots.length) throw new Error('no slots');
+      app.innerHTML = '<label for="booking-slot">1. Choose an available time</label><select id="booking-slot"><option value="">Select a time</option></select><label for="booking-service">2. Choose your service</label><select id="booking-service"><option value="">Select a service</option></select><p id="booking-status" class="notice" hidden></p><a class="button secondary" href="' + registerUrl + '">Register or sign in to book</a>';
+      var slotSelect = document.getElementById('booking-slot');
+      slots.forEach(function (slot) {
+        var option = document.createElement('option');
+        option.value = slot.slot_id;
+        option.textContent = new Date(slot.starts_at).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' });
+        slotSelect.appendChild(option);
+      });
+      fetch(apiBase + '/v1/tenants/' + tenant + '/offerings?catalog=1', { cache: 'no-store' }).then(function (response) { return response.json(); }).then(function (catalog) {
+        (catalog.offerings || []).filter(function (item) { return item.status === 'open' || item.availability === 'open' || item.status === 'consultation_required'; }).forEach(function (item) {
+          var option = document.createElement('option');
+          option.value = item.offering_id;
+          option.textContent = item.title + (item.price_cents ? ' — $' + (item.price_cents / 100).toFixed(2) : ' — consultation pricing');
+          document.getElementById('booking-service').appendChild(option);
+        });
+      });
+      document.getElementById('booking-service').addEventListener('change', function () {
+        var status = document.getElementById('booking-status');
+        if (slotSelect.value && this.value) {
+          status.hidden = false;
+          status.textContent = 'Time selected. Register or sign in above to place a provider-owned hold and continue to checkout.';
+        }
+      });
+    }).catch(function () {
+      app.innerHTML = '<p class="notice">Calendar booking is waiting for the MeritStore ITM provider connection. Subscriber registration will appear here when the tenant is activated.</p><a class="button secondary" href="' + registerUrl + '">Start subscriber registration</a>';
+    });
   }
 
   fetch('/portal.json', { cache: 'no-store' })

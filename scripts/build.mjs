@@ -69,6 +69,7 @@ const configBody = `window.MERIT_DEMO_CONFIG = ${JSON.stringify(
     freemium: limits.guest_and_free || {},
     plusSku: plus.default || {},
     meritstoreRegisterUrl: sync.meritstore_register_url || '',
+    meritstoreApiBase: (sync.meritstore_api_base || '').replace(/\/$/, ''),
     meteredApiBase: meteredBase,
     gatewayApiPrefix: sync.gateway_api_prefix || '/api/gw',
     meritsubsBase: env.MERITSUBS_PUBLIC_BASE_URL || sync.meritsubs_base || 'https://merit-prod.vercel.app/api/meritsubs',

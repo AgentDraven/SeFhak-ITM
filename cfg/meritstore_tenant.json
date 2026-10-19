@@ -4,6 +4,12 @@
   "source_project": "sefhak",
   "registration_slug": "TBD_PROVIDER_ACTIVATION",
   "offerings_seed": [],
+  "proposed_catalog": [
+    { "id": "itm-intake", "name": "ITM first-session intake", "price_usd": 45, "billing": "one_time" },
+    { "id": "itm-member-monthly", "name": "ITM Member", "price_usd": 149, "billing": "monthly", "includes": "one 90-minute massage per month" },
+    { "id": "itm-sholdr-60", "name": "SHOLDR holding space", "price_usd": 50, "billing": "per_hour" },
+    { "id": "itm-vitalhealth-consult", "name": "VitalHealth consultation", "price_usd": null, "billing": "consultation_priced" }
+  ],
   "status": "DRAFT_PROVIDER_HANDOFF",
   "notes": "Do not enable pricing or checkout from this consumer until MeritStore provisions and verifies the Sefhak tenant, catalog, and scheduling contract. Proposed catalog and rates remain in the provider handoff document."
 }
