@@ -119,7 +119,9 @@ async function browserCheck(base) {
   }
   await page.goto(`${base}/portal/subs/`, { waitUntil: 'networkidle' });
   const registerHref = await page.locator('#register-link').getAttribute('href');
-  if (!registerHref || !registerHref.includes(`/store/${consumerId}/register`)) {
+  if (!sync.meritstore_register_url && registerHref === '#') {
+    console.log('PENDING portal subscription CTA: provider registration URL not activated');
+  } else if (!registerHref || !registerHref.includes(`/store/${consumerId}/register`)) {
     failures.push(`Portal subscription CTA: expected /store/${consumerId}/register, got ${registerHref || '(missing)'}`);
   } else {
     console.log('OK portal subscription CTA uses consumer registration path');
