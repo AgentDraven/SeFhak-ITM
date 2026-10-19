@@ -1,6 +1,9 @@
 {
-    "project_id":  "merit-demo",
-    "vercel_scope":  "agentdraven",
+    "schema": "merit.flask_deploy.v1",
+    "project": "sefhakv01",
+    "vercel_team": "meritecosystemv01",
+    "vercel_scope": "meritecosystemv01",
+    "stage": "production",
     "production_branch":  "main",
-    "notes":  "merit deploy links Vercel automatically when .vercel/project.json is missing."
+    "notes":  "Canonical V01 Sefhak consumer project; deploy only through the scoped MERIT vault workflow."
 }
