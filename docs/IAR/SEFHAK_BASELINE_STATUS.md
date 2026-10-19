@@ -4,7 +4,7 @@
 
 - Forked from the clean MERIT consumer showcase baseline.
 - Rebranded the portal around Sefhak’s massage practice.
-- Added the three-lane Crawl / Walk / Run framing for Massage, SHOLDR, and VitalHealth.
+- Added the sequential customer journey: Crawl = Massage, Walk = SHOLDR, Run = VitalHealth.
 - Added explicit first-session, privacy, and provider-boundary messaging.
 - Pointed the consumer configuration at the production MERIT V01 base without inventing a Sefhak registration URL.
 - Added the MeritStore scheduling enhancement handoff.

@@ -15,6 +15,10 @@
     {
       "label": "Request booking access",
       "href": "#schedule"
+    },
+    {
+      "label": "Contact us",
+      "href": "#contact"
     }
   ],
   "providers": [
@@ -30,19 +34,14 @@
     },
     {
       "name": "VitalHealth",
-      "summary": "A future lane for whole-person support, developed carefully after the core massage experience is established.",
-      "href": "#schedule"
-    },
-    {
-      "name": "Subscriber access",
-      "summary": "MeritSubs will own subscriber identity and entitlements once the Sefhak provider tenant is activated.",
+      "summary": "The Run-stage whole-person wellness offering available now alongside ITM’s massage and SHOLDR journey.",
       "href": "#schedule"
     }
   ],
   "notes": [
     "Crawl — Massage: establish the first-session evaluation, therapeutic modalities, privacy boundaries, and recurring client relationship.",
     "Walk — SHOLDR: expand into a clearly bounded listening and holding-space experience after the massage foundation is stable.",
-    "Run — VitalHealth: develop the broader whole-person wellness lane only after scope, qualifications, safety, and provider activation are ready."
+    "Run — VitalHealth: the current whole-person wellness offering, with scope, safety, and service details made clear to each customer."
   ],
   "footer": "MERIT Powered"
 }

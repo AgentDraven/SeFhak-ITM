@@ -149,6 +149,39 @@ h1 {
   color: var(--text) !important;
 }
 
+.contact-form {
+  display: grid;
+  gap: 10px;
+  max-width: 680px;
+}
+
+.contact-form label {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(9, 17, 31, 0.72);
+  color: var(--text);
+  font: inherit;
+}
+
+.contact-form textarea { resize: vertical; }
+
+.contact-form .button {
+  width: fit-content;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.contact-details { color: var(--text) !important; }
+
 footer {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;

@@ -66,6 +66,41 @@
       li.textContent = note;
       notes.appendChild(li);
     });
+
+    var contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var name = document.getElementById('contact-name').value.trim() || 'ITM visitor';
+        var email = document.getElementById('contact-email').value.trim();
+        var message = document.getElementById('contact-message').value.trim() || 'I would like to learn more about ITM.';
+        var subject = 'ITM contact request from ' + name;
+        var body = [
+          'Hello ITM,',
+          '',
+          message,
+          '',
+          'Name: ' + name,
+          'Reply email: ' + email,
+          '',
+          'Placeholder ITM phone: +1 (555) 010-4826'
+        ].join('\n');
+        var status = document.getElementById('contact-status');
+        var mailto = 'mailto:hello@itm.example?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        var copied = navigator.clipboard && navigator.clipboard.writeText
+          ? navigator.clipboard.writeText(body)
+          : Promise.reject(new Error('clipboard unavailable'));
+        copied.then(function () {
+          status.hidden = false;
+          status.textContent = 'Message copied. You can paste it into a text message. Opening your mail app…';
+        }).catch(function () {
+          status.hidden = false;
+          status.textContent = 'Your mail app is opening. If needed, copy the prepared message from the email body to text it.';
+        }).finally(function () {
+          window.location.href = mailto;
+        });
+      });
+    }
   }
 
   fetch('/portal.json', { cache: 'no-store' })

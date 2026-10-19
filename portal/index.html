@@ -44,6 +44,23 @@
       <a class="button secondary" href="#schedule">Booking integration pending</a>
     </section>
 
+    <section class="panel" id="contact">
+      <p class="eyebrow">Contact us</p>
+      <h2>Tell ITM what you need</h2>
+      <p>Enter your email and message. We’ll prepare a message for ITM, copy it so you can text it if preferred, and open your mail app addressed to the placeholder ITM contact.</p>
+      <p class="contact-details">Placeholder ITM contact: <strong>hello@itm.example</strong> · <strong>+1 (555) 010-4826</strong></p>
+      <form id="contact-form" class="contact-form">
+        <label for="contact-name">Your name</label>
+        <input id="contact-name" name="name" autocomplete="name" placeholder="Your name">
+        <label for="contact-email">Your email</label>
+        <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" rows="5" placeholder="How can ITM help?"></textarea>
+        <button class="button" type="submit">Create email + copy for text</button>
+        <p id="contact-status" class="notice" role="status" hidden></p>
+      </form>
+    </section>
+
     <section class="panel">
     <p class="eyebrow">Customer journey</p>
       <h2>Massage → SHOLDR → VitalHealth</h2>
@@ -55,6 +72,7 @@
     <a href="/legal.html">Legal</a>
     <a href="/terms.html">Terms</a>
     <a href="#schedule">Schedule</a>
+    <a href="#contact">Contact us</a>
     <a href="/subs/">Subscriber access</a>
     <span data-portal="footer">MERIT Powered</span>
   </footer>

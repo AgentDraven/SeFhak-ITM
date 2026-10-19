@@ -29,6 +29,6 @@ The exact paths, authentication, hold duration, timezone rules, and response sch
 - Member cadence and rollover rules.
 - Home-visit boundary and surcharge.
 - Service descriptions and safety/boundary language.
-- Whether SHOLDR and VitalHealth are catalog items, separate tenants, or future-only lanes.
+- How Massage, SHOLDR, and the current VitalHealth offering are represented in the approved catalog.
 
 No paid offering is seeded in `cfg/meritstore_tenant.json` until these inputs are approved and the provider activation is verified.

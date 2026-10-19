@@ -14,7 +14,7 @@ The progression is sequential, not three simultaneous lanes: Massage → SHOLDR 
 | --- | --- | --- |
 | Crawl — Massage | Establish the first-session evaluation, therapeutic modalities, privacy boundaries, and recurring client relationship. | Activate a MeritStore catalog and verified appointment availability, then build a recurring base of clients. |
 | Walk — SHOLDR | Add a clearly bounded listening and holding-space experience after the massage foundation is stable. | Validate separate offer, price, consent language, schedule, and provider-owned catalog item. |
-| Run — VitalHealth | Develop the broader whole-person wellness lane. | Launch only after scope, qualifications, safety, provider activation, and evidence-backed fulfillment are ready. |
+| Run — VitalHealth | Offer the current whole-person wellness experience with clear scope and safe service boundaries. | Keep the active offering understandable, bookable, and provider-backed as the customer journey reaches Run. |
 
 ## User flow
 
