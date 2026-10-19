@@ -1,9 +1,9 @@
 {
   "schema": "merit.portal.v1",
   "brand": {
-    "name": "Sefhak Integrative Therapeutic Massage",
+    "name": "ITM | Integrative Therapeutic Massage",
     "tagline": "A restorative, whole-person massage experience shaped around your body’s needs.",
-    "description": "Sefhak combines shiatsu, Swedish massage, myofascial release, trigger point work, gentle stretching, and a spa-inspired setup into a thoughtful session that begins with evaluation and continues with follow-up."
+    "description": "ITM combines shiatsu, Swedish massage, myofascial release, trigger point work, gentle stretching, and a spa-inspired setup into a thoughtful session that begins with evaluation and continues with follow-up."
   },
   "appBaseUrl": "/",
   "audience": "Sefhak massage clients and subscribers",
