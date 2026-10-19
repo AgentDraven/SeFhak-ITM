@@ -140,6 +140,15 @@ h1 {
   margin-top: 28px;
 }
 
+.notice {
+  display: inline-block;
+  margin: 4px 0 18px;
+  padding: 10px 14px;
+  border-left: 3px solid var(--accent);
+  background: rgba(120, 240, 200, 0.08);
+  color: var(--text) !important;
+}
+
 footer {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;

@@ -1,48 +1,48 @@
 {
   "schema": "merit.portal.v1",
-  "brand": {},
+  "brand": {
+    "name": "Sefhak Integrative Therapeutic Massage",
+    "tagline": "A restorative, whole-person massage experience shaped around your body’s needs.",
+    "description": "Sefhak combines shiatsu, Swedish massage, myofascial release, trigger point work, gentle stretching, and a spa-inspired setup into a thoughtful session that begins with evaluation and continues with follow-up."
+  },
   "appBaseUrl": "/",
-  "audience": "First-time MERIT users and subscriber operators",
+  "audience": "Sefhak massage clients and subscribers",
   "ctas": [
     {
-      "label": "Open Workbench",
-      "href": "/play/"
+      "label": "How the first session works",
+      "href": "#schedule"
     },
     {
-      "label": "Register free",
-      "href": "https://merit-prod.vercel.app/store/merit-demo-alpha/register"
+      "label": "Request booking access",
+      "href": "#schedule"
     }
   ],
   "providers": [
     {
-      "name": "Workbench",
-      "summary": "Free MERIT play shell using published package pins from MERIT Prod.",
-      "href": "/play/",
-      "statusPath": "/play/"
+      "name": "Massage",
+      "summary": "An integrative first session combines an intake, body observation, therapeutic massage, and a 48-hour follow-up conversation.",
+      "href": "#schedule"
     },
     {
-      "name": "Journal",
-      "summary": "Local-first journal demo with cloud backup hooks when a subscriber upgrades.",
-      "href": "/journal/",
-      "statusPath": "/journal/"
+      "name": "SHOLDR",
+      "summary": "A private listening space for the moments when you need a grounded shoulder to lean on.",
+      "href": "#schedule"
     },
     {
-      "name": "AMA",
-      "summary": "Question, voting, and leaderboard demo for community interaction.",
-      "href": "/ama/",
-      "statusPath": "/ama/"
+      "name": "VitalHealth",
+      "summary": "A future lane for whole-person support, developed carefully after the core massage experience is established.",
+      "href": "#schedule"
     },
     {
-      "name": "MeritSubs",
-      "summary": "Production registration, subscription, and entitlement route for this app.",
-      "href": "https://merit-prod.vercel.app/store/merit-demo-alpha/register",
-      "statusPath": "/store/merit-demo-alpha/register"
+      "name": "Subscriber access",
+      "summary": "MeritSubs will own subscriber identity and entitlements once the Sefhak provider tenant is activated.",
+      "href": "#schedule"
     }
   ],
   "notes": [
-    "This repo is the public demo consumer; paid provider code stays behind MERIT Prod.",
-    "New users can clone merit-agent-skills, run the CLI, and compare their result with this Portal.",
-    "This public app contains no provider secrets; identity, limits, and subscriptions stay on MERIT services."
+    "Crawl: establish the massage practice, first-session evaluation, privacy boundaries, and a small base of recurring clients.",
+    "Walk: add SHOLDR and VitalHealth as clearly defined, separate offerings after the massage lane is stable.",
+    "Run: let MeritSubs own subscriber access and let MeritStore own catalog, availability, appointment holds, and checkout."
   ],
   "footer": "MERIT Powered"
 }

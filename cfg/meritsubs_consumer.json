@@ -1,8 +1,8 @@
 {
   "schema": "meritsubs.consumer.v1",
-  "consumer_id": "merit-demo-alpha",
+  "consumer_id": "sefhak",
   "mount_prefix": "external_production_mount",
-  "public_base_url": "https://merit-prod.vercel.app/api/meritsubs",
+  "public_base_url": "https://merit-prodv01.vercel.app/api/meritsubs",
   "embed_status": "production_mount_reference_only",
-  "notes": "Public merit-demo does not ship meritsubs, AMA, journal, or other metered utility handlers. Usage, credits, entitlements, and checkout authority remain on production MERIT Vercel mounts."
+  "notes": "Sefhak does not ship MeritSubs provider code. Subscriber identity, entitlements, and checkout authority remain on the production MERIT mounts. Provider tenant activation is still pending."
 }

@@ -1,6 +1,7 @@
 .env.local
 /.merit_launch.md
 .vercel
+.herenow/
 node_modules/
 dist/
 /config.js

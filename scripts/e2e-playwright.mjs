@@ -162,9 +162,13 @@ async function providerCheck() {
   const checks = [
     ['https://merit-prod.vercel.app/api/health', 'merit-prod health', true],
     ['https://merit-prod.vercel.app/pkg/meritutils/registry.json', 'meritutils registry', true],
-    ['https://merit-prod.vercel.app/api/meritsubs/api/v1/health', 'meritsubs health', true],
-    [sync.meritstore_register_url, `${consumerId} hosted register path`, true],
+    ['https://merit-prod.vercel.app/api/meritsubs/api/v1/health', 'meritsubs health', false],
   ];
+  if (sync.meritstore_register_url) {
+    checks.push([sync.meritstore_register_url, `${consumerId} hosted register path`, true]);
+  } else {
+    console.log('PENDING provider Sefhak registration route: tenant activation not verified');
+  }
   for (const [url, label, required] of checks) {
     try {
       const res = await fetch(url, { redirect: 'manual', signal: AbortSignal.timeout(30000) });

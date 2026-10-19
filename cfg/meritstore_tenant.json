@@ -1,43 +1,9 @@
 {
   "schema": "meritstore.tenant.v1",
-  "consumer_id": "merit-demo-alpha",
-  "source_project": "merit-demo",
-  "registration_slug": "merit-demo-alpha",
-  "offerings_seed": [
-    {
-      "id": "free",
-      "name": "Free",
-      "price_usd": 0,
-      "interval": "month",
-      "entitlement_tier": "guest"
-    },
-    {
-      "id": "plus-monthly",
-      "name": "Plus",
-      "price_usd": 10.79,
-      "interval": "month",
-      "weekly_equivalent_usd": 2.49,
-      "entitlement_tier": "plus",
-      "covers": ["journal", "ama"]
-    },
-    {
-      "id": "plus-six-month",
-      "name": "Plus 6 months",
-      "discount_percent": 20,
-      "entitlement_tier": "plus"
-    },
-    {
-      "id": "plus-annual",
-      "name": "Plus Annual",
-      "discount_percent": 50,
-      "entitlement_tier": "plus"
-    }
-  ],
-  "revenue_split": {
-    "operator_share_percent": 90,
-    "processing_fee_percent": 4,
-    "processing_fee_fixed_usd": 0.5
-  },
-  "status": "PROVIDER_ACTIVATED",
-  "notes": "Provider activation verified for https://merit-prod.vercel.app/store/merit-demo-alpha/register. The repository name remains merit-demo; forks must choose their own consumer_id and provider registration URL."
+  "consumer_id": "sefhak",
+  "source_project": "sefhak",
+  "registration_slug": "TBD_PROVIDER_ACTIVATION",
+  "offerings_seed": [],
+  "status": "DRAFT_PROVIDER_HANDOFF",
+  "notes": "Do not enable pricing or checkout from this consumer until MeritStore provisions and verifies the Sefhak tenant, catalog, and scheduling contract. Proposed catalog and rates remain in the provider handoff document."
 }
