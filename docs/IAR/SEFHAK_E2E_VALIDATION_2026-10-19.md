@@ -26,9 +26,10 @@ This record covers the consumer portal and its ITM booking handoff. It uses only
 | Visitor uses AMA during provider outage | Local fallback posts and renders a question | PASS |
 | Visitor sees subscription CTA | CTA does not imply activation when provider registration is absent | PASS/PENDING: CTA is intentionally fail-closed |
 | Visitor reaches live ITM provider tenant | Activated registration route is available | PENDING: no live ITM registration URL is configured |
+| Visitor opens booking while ITM provider is unavailable | UI remains fail-closed and offers subscriber registration fallback | PASS: pending activation message and `/subs/` fallback link |
 | Provider health | Required MERIT production health and registry are reachable | PASS: `merit-prod` health and registry; WARN: `meritsubs` health returned HTTP 404 |
 
-Consumer command ended with: `E2E OK: sefhak routes, provider links, Hello World, screenshots`.
+Consumer command ended with: `E2E OK: sefhak routes, provider links, Hello World, screenshots`. The booking-unavailable assertion also passed, confirming the consumer does not imply live activation.
 
 ## Booking/persona contract
 

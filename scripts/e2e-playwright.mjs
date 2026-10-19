@@ -157,6 +157,21 @@ async function browserCheck(base) {
     console.log('OK AMA local fallback post');
   }
   await localPage.close();
+  const bookingPage = await browser.newPage({ viewport: { width: 1024, height: 900 } });
+  await bookingPage.route(/https:\/\/merit-storev01\.vercel\.app\/api\//, (route) => route.abort());
+  await bookingPage.goto(`${base}/portal/`, { waitUntil: 'networkidle' });
+  const bookingText = await bookingPage.locator('#booking-app').textContent();
+  if (!bookingText.includes('waiting for the MeritStore ITM provider connection')) {
+    failures.push('Booking fail-closed: unavailable provider did not show the pending activation message');
+  } else {
+    console.log('OK Booking fail-closed provider-unavailable state');
+  }
+  if ((await bookingPage.locator('#booking-app a[href="/subs/"]').count()) < 1) {
+    failures.push('Booking fail-closed: subscriber registration fallback link missing');
+  } else {
+    console.log('OK Booking fail-closed subscriber registration link');
+  }
+  await bookingPage.close();
   await browser.close();
 }
 
