@@ -188,3 +188,8 @@ The original demo tags `v0.3.0`, `v0.3.1`, and `v0.3.2` predate the current deta
 - Add MERIT E2EValidation evidence for ITM booking personas, expected negative cases, and consumer fail-closed behavior.
 - Harden the Playwright booking-unavailable assertion and record the scoped GitHub/Vercel closeout boundary.
 - Point the consumer deployment manifest at the approved V01 `sefhakv01` project and `meritecosystemv01` scope.
+## [0.3.34] - 2026-10-19 — move canonical Sefhak consumer to AgentDraven
+
+- Establish `AgentDraven/SeFhak-ITM` as the canonical GitHub repository for the Sefhak consumer while preserving the separate `Mr-PI-Bala/merit-demo` repository.
+- Update repository ownership documentation and retain the existing V01 deployment target.
+

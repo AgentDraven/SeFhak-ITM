@@ -187,19 +187,6 @@ No seed content — operators/subscribers add their own white-label content.
 <table><tr><td bgcolor="#0d9488"><strong><big><big>🛟 Abuse</big></big></strong></td></tr></table>
 
 Report to meritlabs@protonmail.com (+ operator email in `cfg/branding.json` when set).
-# Developer repository access
+# Repository ownership
 
-To allow a developer account to push changes, the repository owner or an administrator must grant collaborator access:
-
-```powershell
-gh api --method PUT repos/Mr-PI-Bala/merit-demo/collaborators/AgentDraven `
-  --field permission=push
-```
-
-Verify access after the invitation is accepted:
-
-```powershell
-gh api repos/Mr-PI-Bala/merit-demo --jq '.permissions'
-```
-
-`push` must be `true`. A local Git author name or a token with `repo` scope does not itself grant repository write permission. If access cannot be granted, use a writable fork and update `origin` before running release closeout.
+The canonical Sefhak consumer repository is [AgentDraven/SeFhak-ITM](https://github.com/AgentDraven/SeFHak-ITM). The separate legacy `Mr-PI-Bala/merit-demo` repository is intentionally preserved and is not this consumer's release remote.
