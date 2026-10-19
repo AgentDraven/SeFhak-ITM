@@ -6,13 +6,15 @@ Status: baseline consumer portal and provider handoff draft
 
 Help a client move from a calm first conversation to a recurring, personalized therapeutic massage relationship.
 
-## Crawl / Walk / Run
+## Customer journey: Crawl / Walk / Run
 
-| Lane | Crawl | Walk | Run |
-| --- | --- | --- | --- |
-| Massage | Explain the first-session evaluation, modalities, boundaries, and follow-up | Activate a MeritStore catalog and verified appointment availability | Build a recurring base of 25 monthly clients and later train certified therapists |
-| SHOLDR | Describe a bounded listening experience without implying therapy or medical care | Validate a separate offer, price, consent language, and schedule | Establish a repeatable listening practice with its own provider-owned catalog item |
-| VitalHealth | Keep the lane visible as a future direction only | Define scope, qualifications, and safe service boundaries | Launch only after approval, provider activation, and evidence-backed fulfillment |
+The progression is sequential, not three simultaneous lanes: Massage → SHOLDR → VitalHealth.
+
+| Stage | Customer focus | Definition of progress |
+| --- | --- | --- |
+| Crawl — Massage | Establish the first-session evaluation, therapeutic modalities, privacy boundaries, and recurring client relationship. | Activate a MeritStore catalog and verified appointment availability, then build a recurring base of clients. |
+| Walk — SHOLDR | Add a clearly bounded listening and holding-space experience after the massage foundation is stable. | Validate separate offer, price, consent language, schedule, and provider-owned catalog item. |
+| Run — VitalHealth | Develop the broader whole-person wellness lane. | Launch only after scope, qualifications, safety, provider activation, and evidence-backed fulfillment are ready. |
 
 ## User flow
 
