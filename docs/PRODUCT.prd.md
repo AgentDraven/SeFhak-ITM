@@ -1,10 +1,10 @@
-# Sefhak Integrative Therapeutic Massage — Product PRD
+# ITM — Integrate Therapeutic Massage Product PRD
 
 Status: baseline consumer portal and provider handoff draft
 
 ## North star
 
-Help a client move from a calm first conversation to a recurring, personalized integrative therapeutic massage relationship.
+Help a client move from a calm first conversation to a recurring, personalized therapeutic massage relationship.
 
 ## Crawl / Walk / Run
 
