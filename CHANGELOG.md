@@ -182,3 +182,8 @@ Baseline public showcase before Pass 1 DualRail Hosted Ready work (Hello World C
 ## Historical release index
 
 The original demo tags `v0.3.0`, `v0.3.1`, and `v0.3.2` predate the current detailed changelog sections. Their tag history remains immutable and is the source of exact historical diffs; future releases must have a dedicated version section.
+## [0.3.32] — 2026-10-19
+
+### Validation
+- Add MERIT E2EValidation evidence for ITM booking personas, expected negative cases, and consumer fail-closed behavior.
+- Harden the Playwright booking-unavailable assertion and record the scoped GitHub/Vercel closeout boundary.
