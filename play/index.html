@@ -1,12 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-webpage-shell="createAppShell">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MERIT Play</title>
   <link rel="stylesheet" href="/assets/merit-surface.css">
-  <link rel="stylesheet" href="https://merit-prod.vercel.app/pkg/meritutils/merit_ux/0.1.3/themes/gloss-aurora.css" integrity="sha384-t2lrh9VYGPmekcUt8/mNthwxEkgOBstLDnLn6g/dhFgWen+h3pDYGx+FLE4u4NiS" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://pkg-meritutils.vercel.app/merit_workbench/0.4.14/merit-workbench.css" integrity="sha384-u21263n25R9YNIR6NchCkydfaHjBQvyobfiuzh71m2cXXH7jjPQiP/HP4l0Xbu6j" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://merit-utilsv01.vercel.app/merit_ux/0.1.4/themes/gloss-aurora.css" integrity="sha384-t2lrh9VYGPmekcUt8/mNthwxEkgOBstLDnLn6g/dhFgWen+h3pDYGx+FLE4u4NiS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://merit-utilsv01.vercel.app/merit_workbench/0.4.36/merit-workbench.css" integrity="sha384-WF3OparE7PaUCnExXe4Zx1mqT6kjd4Ghr96BTiHkKCja3I/xNTriSDevCmWy2HEV" crossorigin="anonymous">
   <style>
     .merit-play { max-width: 74rem; margin: 0 auto; padding: 1.2rem 1.25rem 4rem; }
     .merit-hello { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr); gap: 1.5rem; align-items: end; padding: 2.5rem 0 2rem; }
@@ -61,7 +61,7 @@
         <h1 id="meritutils-hello-title">Hello, meritutils</h1>
         <p id="merit-play-lede" class="lede">Make a little room for what you are learning, noticing, and ready to share.</p>
         <p id="meritutils-hello-status" class="merit-runtime-status" data-provider-ready="pending" data-runtime-state="checking">
-          Checking hosted merit_workbench@0.4.14 on pkg-meritutils.vercel.app…
+          Checking hosted merit_workbench@0.4.36…
         </p>
         <div class="merit-play-actions">
           <a id="merit-register-free" href="https://merit-prod.vercel.app/store/merit-demo-alpha/register">Register free</a>
@@ -87,21 +87,21 @@
   <footer id="merit-footer"></footer>
   <script src="/config.js"></script>
   <script src="/assets/merit-shell.js"></script>
-  <script src="https://merit-prod.vercel.app/pkg/meritutils/merit_ux/0.1.3/merit_ux.global.js" integrity="sha384-CW3LaX7eQjJyLMPVz/8Qs1T+g1n0Rr6iiDHeBnd3x0Hlpz+NjCDR2FL3nlWfQfxF" crossorigin="anonymous"></script>
-  <script src="https://pkg-meritutils.vercel.app/merit_workbench/0.4.14/merit-workbench.js" integrity="sha384-aNcJZoKSEJlS1Lg7qrwJ/BtMhubnl742kwXLuBxBX7ft4TdPzydlG9BCZ1HxHAON" crossorigin="anonymous"></script>
+  <script src="https://merit-utilsv01.vercel.app/merit_ux/0.1.4/merit_ux.global.js" integrity="sha384-wvxfHKxxdRLmxgs0kCnGcrS8I/QyuRaMt0CRtNxdlbLT5loX6PDzSJdqq5cDkh9d" crossorigin="anonymous"></script>
+  <script src="https://merit-utilsv01.vercel.app/merit_workbench/0.4.36/merit-workbench.js" integrity="sha384-d63myc+/0V4f0a09fCR3wy+tEciDtfRbQ8aPxJsRfWC3VzoKUNqktuUSjvmc1OxU" crossorigin="anonymous"></script>
   <script>
     (function meritPlayBootstrap() {
       const EXPECTED = {
         packageId: 'merit_workbench',
-        version: '0.4.14',
-        host: 'pkg-meritutils.vercel.app',
+        version: '0.4.36',
+        host: 'merit-utilsv01.vercel.app',
         portalPath: '/portal/',
       };
       const cfg = window.MERIT_DEMO_CONFIG || {};
-      const appName = (cfg.branding && cfg.branding.product_name) || 'MERIT Demo';
+      const appName = (cfg.branding && cfg.branding.product_name) || 'ITM';
       const tagline = (cfg.branding && cfg.branding.tagline) || 'Make a little room for what you are learning, noticing, and ready to share.';
       document.title = `${appName} · Workbench`;
-      const registerUrl = cfg.meritstoreRegisterUrl || 'https://merit-prod.vercel.app/store/merit-demo-alpha/register';
+      const registerUrl = cfg.meritstoreRegisterUrl || '/subs/';
       const portalUrl = cfg.portalUrl || EXPECTED.portalPath;
       const expectedVersion = cfg.expectedWorkbenchVersion || EXPECTED.version;
       const helloStatus = document.getElementById('meritutils-hello-status');

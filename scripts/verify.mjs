@@ -64,5 +64,5 @@ for (const [rel, needle, message] of checks) {
     process.exit(1);
   }
 }
-console.log('verify OK: merit-demo consumer scaffold');
+console.log('verify OK: ITM consumer');
 process.exit(0);

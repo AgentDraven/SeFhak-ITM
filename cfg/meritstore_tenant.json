@@ -2,7 +2,7 @@
   "schema": "meritstore.tenant.v1",
   "consumer_id": "sefhak",
   "source_project": "sefhak",
-  "registration_slug": "TBD_PROVIDER_ACTIVATION",
+  "registration_slug": "itm",
   "offerings_seed": [],
   "proposed_catalog": [
     { "id": "itm-intake", "name": "ITM first-session intake", "price_usd": 45, "billing": "one_time" },

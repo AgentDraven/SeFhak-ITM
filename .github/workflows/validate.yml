@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  merit-demo:
+  itm:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,6 +17,7 @@ jobs:
         run: npm ci
       - name: Install Playwright Chromium
         run: npx playwright install chromium
-      - name: Validate MERIT demo consumer
-        shell: pwsh
-        run: ./merit.ps1 closeout
+      - name: Check provider main tips and hosted integrity
+        run: npm run providers:check -- --remote --hosted
+      - name: Validate ITM consumer
+        run: npm run verify && npm run e2e:playwright

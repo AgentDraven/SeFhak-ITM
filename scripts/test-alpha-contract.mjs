@@ -14,7 +14,7 @@ const failures = [];
 if (!/^[a-z0-9][a-z0-9-]*$/.test(sync.consumer_id)) failures.push(`consumer_id must be URL-safe, got ${sync.consumer_id}`);
 const providerContract = JSON.parse(fs.readFileSync(path.join(root, 'cfg/alpha_trial_consumer.json'), 'utf8').replace(/^\uFEFF/, ''));
 if (providerContract.consumer_id !== sync.consumer_id) failures.push('alpha trial contract must match cfg/merit-sync.json consumer_id');
-if (!providerContract.expected_register_path.endsWith(`/${sync.consumer_id}/register`)) failures.push('alpha trial contract must target the configured consumer registration path');
+if (providerContract.expected_register_path !== `/${providerContract.store_tenant}/register` || providerContract.register_url !== sync.meritstore_register_url) failures.push('ITM registration contract must match the shared Store tenant and runtime URL');
 for (const [name, page] of [['journal', journal], ['ama', ama]]) {
   if (!page.includes('/assets/merit-api.js')) failures.push(`${name}: missing public API helper`);
   if (!page.includes('window.MERIT_API.request')) failures.push(`${name}: does not use public API helper`);

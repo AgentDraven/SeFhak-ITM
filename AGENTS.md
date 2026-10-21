@@ -1,6 +1,10 @@
 # AGENTS.md
 
-L3: **merit-demo** — MERIT freemium showcase consumer.
+L3: **ITM** — the customer front end for the ITM store.
+
+The company and consumer product name is **ITM**. Use that exact name in customer-facing branding and current documentation. The inherited folder, remote, and provider identifiers are technical compatibility names, not company names.
+
+This repository owns the customer experience. Shared MeritStore inside `merit-utils/services/merit-store` owns the catalog, booking/checkout APIs and commercial state; MeritSubs owns identity and entitlements. Utils and its Store service share provider `main`; Subs remains on its own canonical `main`. Keep provider code out of this consumer. Update `cfg/providers.lock.json` and immutable utility pins together using `npm run providers:sync`, then validate against remote main before release. Do not create provider forks, new development branches, or sibling source imports for ITM.
 
 - Design: `merit-demo docs/merit_demo_design.md`
 - Usage: `merit-demo docs/merit_demo_usage.md`

@@ -3,9 +3,9 @@
   "consumer_id": "sefhak",
   "metered_api_base": "https://merit-prodv01.vercel.app",
   "gateway_api_prefix": "/api/gw",
-  "meritsubs_base": "https://merit-prodv01.vercel.app/api/meritsubs",
+  "meritsubs_base": "/api/providers/meritsubs",
   "meritstore_api_base": "https://merit-storev01.vercel.app/api",
-  "meritstore_register_url": "",
+  "meritstore_register_url": "https://merit-storev01.vercel.app/itm/register",
   "freemium_limits": "cfg/freemium_limits.json",
   "plus_sku": "cfg/plus_sku.json"
 }

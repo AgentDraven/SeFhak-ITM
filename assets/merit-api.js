@@ -60,7 +60,12 @@
   function request(path, options = {}) {
     const requestOptions = { credentials: 'include', ...options };
     requestOptions.headers = headers(requestOptions.headers || {});
-    return fetch(`${apiBase}${path}`, requestOptions);
+    const identityPrefix = `${gatewayPrefix}/meritsubs/`;
+    const identityBase = String(cfg.meritsubsBase || '').replace(/\/$/, '');
+    const destination = identityBase && path.startsWith(identityPrefix)
+      ? `${identityBase}/${path.slice(identityPrefix.length)}`
+      : `${apiBase}${path}`;
+    return fetch(destination, requestOptions);
   }
 
   function rail(service, suffix = '') {

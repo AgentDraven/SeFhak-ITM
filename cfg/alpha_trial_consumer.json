@@ -1,12 +1,13 @@
 {
   "schema": "merit.consumer_provider_contract.v1",
-  "consumer_id": "merit-demo-alpha",
-  "provider_base_url": "https://merit-prodv01.vercel.app",
-  "register_url": "https://merit-prodv01.vercel.app/store/merit-demo-alpha/register",
-  "expected_register_path": "/store/merit-demo-alpha/register",
-  "health_url": "https://merit-prodv01.vercel.app/api/health",
+  "consumer_id": "sefhak",
+  "store_tenant": "itm",
+  "provider_base_url": "https://merit-storev01.vercel.app",
+  "register_url": "https://merit-storev01.vercel.app/itm/register",
+  "expected_register_path": "/itm/register",
+  "health_url": "https://merit-storev01.vercel.app/api/v1/health",
   "rules": [
-    "This contract belongs to merit-demo and is not a generic skills default.",
+    "This is the ITM consumer contract against the shared Store service on provider main.",
     "The provider must provision this consumer before registration acceptance.",
     "A successful HTTP response on a wrong final route is a failure."
   ]

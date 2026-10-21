@@ -2,7 +2,7 @@
   "schema": "meritsubs.consumer.v1",
   "consumer_id": "sefhak",
   "mount_prefix": "external_production_mount",
-  "public_base_url": "https://merit-prodv01.vercel.app/api/meritsubs",
+  "public_base_url": "https://merit-subsv01.vercel.app",
   "embed_status": "production_mount_reference_only",
-  "notes": "Sefhak does not ship MeritSubs provider code. Subscriber identity, entitlements, and checkout authority remain on the production MERIT mounts. Provider tenant activation is still pending."
+  "notes": "ITM consumes the shared MeritSubs main provider contract. Identity and entitlements remain provider-owned; commerce and booking belong to the Store service in MeritUtils main. Exact accepted main commits are recorded in cfg/providers.lock.json."
 }

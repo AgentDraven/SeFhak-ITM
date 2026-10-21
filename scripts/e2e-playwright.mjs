@@ -121,8 +121,8 @@ async function browserCheck(base) {
   const registerHref = await page.locator('#register-link').getAttribute('href');
   if (!sync.meritstore_register_url && registerHref === '#') {
     console.log('PENDING portal subscription CTA: provider registration URL not activated');
-  } else if (!registerHref || !registerHref.includes(`/store/${consumerId}/register`)) {
-    failures.push(`Portal subscription CTA: expected /store/${consumerId}/register, got ${registerHref || '(missing)'}`);
+  } else if (registerHref !== sync.meritstore_register_url) {
+    failures.push(`Portal subscription CTA: expected ${sync.meritstore_register_url}, got ${registerHref || '(missing)'}`);
   } else {
     console.log('OK portal subscription CTA uses consumer registration path');
   }
@@ -166,7 +166,7 @@ async function browserCheck(base) {
   } else {
     console.log('OK Booking fail-closed provider-unavailable state');
   }
-  if ((await bookingPage.locator('#booking-app a[href="/subs/"]').count()) < 1) {
+  if ((await bookingPage.locator(`#booking-app a[href="${sync.meritstore_register_url || '/subs/'}"]`).count()) < 1) {
     failures.push('Booking fail-closed: subscriber registration fallback link missing');
   } else {
     console.log('OK Booking fail-closed subscriber registration link');
@@ -177,14 +177,14 @@ async function browserCheck(base) {
 
 async function providerCheck() {
   const checks = [
-    ['https://merit-prod.vercel.app/api/health', 'merit-prod health', true],
-    ['https://merit-prod.vercel.app/pkg/meritutils/registry.json', 'meritutils registry', true],
-    ['https://merit-prod.vercel.app/api/meritsubs/api/v1/health', 'meritsubs health', false],
+    [`${sync.metered_api_base}/api/health`, 'merit-prod health', true],
+    ['https://merit-utilsv01.vercel.app/registry.json', 'meritutils main registry', true],
+    ['https://merit-subsv01.vercel.app/api/v1/health', 'meritsubs main health', true],
   ];
   if (sync.meritstore_register_url) {
     checks.push([sync.meritstore_register_url, `${consumerId} hosted register path`, true]);
   } else {
-    console.log('PENDING provider Sefhak registration route: tenant activation not verified');
+    console.log('PENDING provider ITM registration route: tenant activation not verified');
   }
   for (const [url, label, required] of checks) {
     try {

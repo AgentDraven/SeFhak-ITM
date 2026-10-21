@@ -5,5 +5,5 @@
     "vercel_scope": "meritecosystemv01",
     "stage": "production",
     "production_branch":  "main",
-    "notes":  "Canonical V01 Sefhak consumer project; deploy only through the scoped MERIT vault workflow."
+    "notes":  "ITM consumer on AgentDraven/ITM main; existing V01 project identity retained. Provider revisions and shared Store source are recorded in cfg/providers.lock.json."
 }

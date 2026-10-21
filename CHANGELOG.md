@@ -1,3 +1,12 @@
+## [0.3.35] - 2026-10-21 — ITM company and consumer identity
+
+- Use ITM as the exact company/product name in the portal, branding configuration, subscriber copy and package metadata.
+- Replace the inherited showcase README with ITM consumer instructions and clarify the front-end versus shared-store ownership boundary.
+- Keep existing provider identifiers and historical release evidence compatible.
+- Consume canonical Utils/Subs main tips through a provider lock and hosted SRI checks; refresh workbench, journal and UX pins, use the shared ITM Store registration route and proxy canonical Subs APIs.
+- Rename the consumer repository in place to AgentDraven/ITM and its working folder to C:/DApps/ITM. Store source is consolidated into merit-utils/services/merit-store rather than a consumer-specific provider fork.
+- Validation: build/verify/fork and identity-context contracts, current V01 hosted artifact integrity, provider health/ITM registration read-back and the existing Playwright route/interaction suite pass. Full durable authenticated booking acceptance remains separate.
+
 ## [0.3.31] — 2026-09-22
 
 ### Maintenance

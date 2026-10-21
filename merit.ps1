@@ -1,4 +1,4 @@
-# merit-demo public/operator CLI — keeps build, test, hosting, and source-control details behind MERIT commands.
+# ITM public/operator CLI — keeps build, test, hosting, and source-control details behind MERIT commands.
 
 param()
 
@@ -9,7 +9,7 @@ $Rest = if ($args.Count -gt 1) { @($args[1..($args.Count - 1)]) } else { @() }
 
 function Write-MeritHelp {
     Write-Host @"
-merit-demo CLI
+ITM CLI
 
 Commands:
   verify      Build and verify the local consumer scaffold
@@ -221,7 +221,7 @@ function Invoke-Closeout {
         if ($authority.plane -eq 'vault') {
             $runner = (Get-Command pwsh -ErrorAction SilentlyContinue).Source
             if (-not $runner) { $runner = (Get-Command powershell -ErrorAction Stop).Source }
-            & $runner -NoProfile -ExecutionPolicy Bypass -File $authority.cli 'mXin' '-Message' 'merit-demo release closeout'
+            & $runner -NoProfile -ExecutionPolicy Bypass -File $authority.cli 'mXin' '-Message' 'fix: align ITM company and consumer identity'
             if ($LASTEXITCODE -ne 0) { throw "vault release closeout failed (exit $LASTEXITCODE)" }
         } else {
             Invoke-MeritSkillsForward -ForwardArgs @('release','--path',$Root)

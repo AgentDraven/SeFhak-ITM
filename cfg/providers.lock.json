@@ -1,0 +1,22 @@
+{
+  "schema": "merit.consumer-provider-lock.v1",
+  "consumer": "ITM",
+  "providers": {
+    "meritutils": {
+      "repository": "AgentDraven/merit-utils",
+      "branch": "main",
+      "commit": "3a4723eea4794fbc87e50555c2f25b890597acd2"
+    },
+    "meritsubs": {
+      "repository": "AgentDraven/merit-subs",
+      "branch": "main",
+      "commit": "85d5b59204332b36234b317445b27b5cd1a820d1"
+    }
+  },
+  "store": {
+    "provider": "meritutils",
+    "root": "services/merit-store",
+    "tenant": "itm",
+    "api_base": "https://merit-storev01.vercel.app/api"
+  }
+}
