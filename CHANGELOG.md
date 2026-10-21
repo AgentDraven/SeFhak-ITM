@@ -1,3 +1,8 @@
+## [0.3.36] - 2026-10-21
+
+- Validate the committed provider lock and hosted SRI in CI without assuming access to private sibling repositories. Authenticated remote-main verification remains a required release check.
+- Validation: authenticated provider-main and hosted-integrity check passed locally; CI validates the same published artifact bytes using repository-scoped access only.
+
 ## [0.3.35] - 2026-10-21 — ITM company and consumer identity
 
 - Use ITM as the exact company/product name in the portal, branding configuration, subscriber copy and package metadata.

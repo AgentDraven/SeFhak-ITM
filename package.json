@@ -1,6 +1,6 @@
 {
   "name": "itm",
-  "version": "0.3.35",
+  "version": "0.3.36",
   "description": "ITM customer front end for the ITM store on shared MERIT services",
   "private": true,
   "type": "module",

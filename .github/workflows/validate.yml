@@ -17,7 +17,9 @@ jobs:
         run: npm ci
       - name: Install Playwright Chromium
         run: npx playwright install chromium
-      - name: Check provider main tips and hosted integrity
-        run: npm run providers:check -- --remote --hosted
+      # GITHUB_TOKEN is scoped to ITM and cannot read the private provider repos.
+      # Release operators run --remote with their existing provider access.
+      - name: Check provider lock and hosted integrity
+        run: npm run providers:check -- --hosted
       - name: Validate ITM consumer
         run: npm run verify && npm run e2e:playwright

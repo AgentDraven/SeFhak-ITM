@@ -15,6 +15,8 @@ The first browser run correctly rejected an inherited hard-coded workbench versi
 
 This is source-consolidation and frontend/provider-contract acceptance. It does not turn the existing in-process calendar into durable production booking or prove live payment, subscriber recovery, multi-device or clinical capabilities. Those existing product gates remain separately open.
 
+CI verifies the committed provider lock and hosted artifact integrity. Both providers are private, and ITM's repository-scoped GitHub token cannot inspect their main branches. The authenticated operator must run `npm run providers:check -- --remote --hosted` immediately before release; CI does not claim that separate remote-main check. No cross-repository credential is copied into the consumer.
+
 ## Release and preservation
 
 Source changes are delivered on existing main branches only. Uncommitted provider work was externally preserved with file hashes and Git history bundles, temporarily stashed for main convergence, and is restored separately from the published consolidation. Extra development checkouts are retired only after the shared main source and deployment are verified. Previous evidence and original Store history remain recoverable.
